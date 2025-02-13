@@ -19,11 +19,11 @@ modules:
       - "authn-authz"
       - "frontend"
     services:
-      - egovio/egov-accesscontrol:v1.1.3-72f8a8f87b-24
-      - egovio/egov-enc-service:v1.1.2-72f8a8f87b-9
+      - egovio/egov-accesscontrol:v2.9.0-063968adc7-17
+      - egovio/egov-enc-service:v2.9.0-aad7536fde-23
       - egovio/egov-filestore:v1.2.4-72f8a8f87b-10
-      - egovio/egov-localization:v1.1.3-72f8a8f87b-6
-      - egovio/egov-idgen:v1.2.3-72f8a8f87b-7
+      - egovio/egov-localization:v2.9.0-063968adc7-23
+      - egovio/egov-idgen:v2.9.0-063968adc7-18
       - egovio/egov-indexer:indexer-17-searchBody-1799f17903-57
       - egovio/egov-location:v1.1.5-f9271c8-7
       - egovio/egov-mdms-service:v1.3.2-72f8a8f87b-12
