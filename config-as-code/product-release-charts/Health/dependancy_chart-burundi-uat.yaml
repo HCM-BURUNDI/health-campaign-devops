@@ -34,7 +34,7 @@ modules:
       - egovio/egov-persister:v1.1.5-3371bc2-5
       - egovio/mdms-v2:MDMS-v2-2.9LTS-fc6b868dce-47
       - egovio/egov-url-shortening:v1.1.2-1715164454-3
-      - egovio/egov-user:health-digit-master-c7e4f3147b-7
+      - egovio/egov-user:HDDF-2588-e98d24c8a5-56
       - egovio/user-otp:health-digit-master-dca3efde85-7
       - egovio/egov-workflow-v2:2.9.1-80b58dc788-15
       - egovio/report:v1.3.4-96b24b0d72-16
@@ -50,7 +50,7 @@ modules:
       - "core"
     services:
       - egovio/egf-master:v1.1.3-72f8a8f87b-15
-      - egovio/egov-hrms:HDDF-2209-6012397f52-25
+      - egovio/egov-hrms:HDDF-2588-db2470d2f7-41
   - name: "frontend"
     dependencies:
       - "business"
@@ -75,7 +75,7 @@ modules:
       # - egovio/facility:v1.0.0-a51bee1435-19
       - egovio/facility:v1.1.2-3f860f8a31-23
       - egovio/product:v1.1.0-00a7accbda-31
-      - egovio/individual:HDDF-2209-individual-c2a5ea37e0-22
+      - egovio/individual:HDDF-2588-Individual-39e5741a15-30
       - egovio/transformer:finance-checklist-changes-5096dd9b0f-272
       - egovio/stock:v1.1.3-3f860f8a31-44
       - egovio/household:v1.1.4-a0e714254c-30
