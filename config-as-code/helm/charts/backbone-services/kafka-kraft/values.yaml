@@ -113,6 +113,9 @@ existingConfigmap: ""
 ##
 extraConfig: |
   num.partitions=20
+  max.request.size=200000000
+  message.max.bytes=200000000
+  max.partition.fetch.bytes=200000000
 ## @param secretConfig Additional configuration to be appended at the end of the generated Kafka configuration file.
 ## This value will be stored in a secret.
 ##
