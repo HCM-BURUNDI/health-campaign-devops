@@ -98,3 +98,5 @@ env: |
         key: password
   - name: JAVA_ENABLE_DEBUG
     value: {{ index .Values "java-enable-debug" | quote }}
+  - name: CACHE_EXPIRY_TIME_IN_MINUTES
+    value: 1
