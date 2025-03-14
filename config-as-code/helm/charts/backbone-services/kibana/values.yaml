@@ -160,13 +160,13 @@ ingress:
     nginx.ingress.kubernetes.io/lua-resty-waf-score-threshold: "10"
     nginx.ingress.kubernetes.io/use-regex: "true"
   hosts:
-    - host: burundi-uat.digit.org
+    - host: tsindamalariya.bi
       paths:
         - path: /kibana-upgrade
   tls: 
-   - secretName: burundi-uat.digit.org-tls-certs
+   - secretName: tsindamalariya.bi-tls-certs
      hosts:
-       - burundi-uat.digit.org
+       - tsindamalariya.bi
 #  hosts:
 #    - host: salama.digit.org
 #      paths:
