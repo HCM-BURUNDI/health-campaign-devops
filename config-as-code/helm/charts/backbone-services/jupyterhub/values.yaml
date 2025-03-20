@@ -652,11 +652,11 @@ prePuller:
 ingress:
   enabled: true
   hosts:
-    - salama.digit.org
+    - tsindamalariya.bi
   tls:
     - hosts:
-        - salama.digit.org
-      secretName: salama.digit.org-tls-certs
+        - tsindamalariya.bi
+      secretName: tsindamalariya.bi-tls-certs
   annotations: {}
   ingressClassName: nginx
   pathSuffix: hub
