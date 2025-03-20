@@ -63,7 +63,7 @@ modules:
       - "core"
       - "business"
     services:
-      - egovio/dashboard-analytics:HDDF-2373-d807936776-71
+      - egovio/dashboard-analytics:analytics-es8-auth-e2dbdac597-73
       - egovio/dashboard-ingest:v1.1.4-72f8a8f87b-10
       - egovio/dss-dashboard:v1.8.0-0d70d60e63-53
   - name: m_health
@@ -76,7 +76,7 @@ modules:
       - egovio/facility:v1.1.2-3f860f8a31-23
       - egovio/product:v1.1.0-00a7accbda-31
       - egovio/individual:HDDF-2588-Individual-39e5741a15-30
-      - egovio/transformer:HDDF-2608-e103eee28c-307
+      - egovio/transformer:burundi-changes-6d58b06bdc-323
       - egovio/stock:v1.1.3-3f860f8a31-44
       - egovio/household:HCMPRE-1254-Comunity-household-8064857b8c-36
       - egovio/project:HDDF-1638-55ba2879f5-26
