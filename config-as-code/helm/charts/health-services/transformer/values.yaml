@@ -292,4 +292,6 @@ env: |
   - name: EGOV_PROGRAM_MANDATE_DIVIDING_FACTOR
     value: "1.8"
   - name: EGOV_LOCALIZATION_LOCALE_CODE
-    value: pt_MZ
+    value: fr_BI
+  - name: EGOV_LOCALIZATION_MODULE_NAME
+    value: rainmaker-boundary-admin
