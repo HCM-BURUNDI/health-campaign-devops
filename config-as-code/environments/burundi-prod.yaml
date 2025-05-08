@@ -17,6 +17,7 @@ cluster-configs:
         db-url: "jdbc:postgresql://burundi-prod-db.cb0mseqikcx6.af-south-1.rds.amazonaws.com:5432/burundiproddb" ## example: jdbc:postgresql://egov-demo.postgres.database.azure.com:5432/egov_demo
         domain: "tsindamalariya.bi" ## Add your Domain Name
         redis-host: "redis.backbone"
+        redis-downsync-host: "burundi-prod.jsibwc.ng.0001.afs1.cache.amazonaws.com"
         egov-services-fqdn-name: "https://tsindamalariya.bi/" ## Add your Domain Name
         aws-cluster-ip: "https://94656E58C83689779035C1C88FFFCBC7.gr7.af-south-1.eks.amazonaws.com"
         aws-region: "af-south-1"
