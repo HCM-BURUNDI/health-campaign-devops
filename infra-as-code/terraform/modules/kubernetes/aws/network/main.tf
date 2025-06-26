@@ -42,7 +42,9 @@ resource "aws_subnet" "private_subnet" {
   availability_zone = "${var.availability_zones[count.index]}"
   cidr_block        = "${cidrsubnet("${var.vpc_cidr_block}", 3, 2+count.index)}" 
   vpc_id            = "${aws_vpc.vpc.id}"
-
+  lifecycle {
+    ignore_changes = [ enable_resource_name_dns_a_record_on_launch ]
+  }
   tags = "${
     tomap({
       "Name" = "${var.availability_zones[count.index]}-${var.cluster_name}"
