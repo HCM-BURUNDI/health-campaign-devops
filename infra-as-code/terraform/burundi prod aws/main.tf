@@ -65,8 +65,9 @@ module "eks" {
 }
 
 module "eks_managed_node_group" {
-  depends_on = [module.eks]
+  # depends_on = [module.eks]
   source = "terraform-aws-modules/eks/aws//modules/eks-managed-node-group"
+  version         = "~> 20.0"
   name            = "${var.cluster_name}-ng"
   cluster_name    = var.cluster_name
   cluster_version = var.kubernetes_version
@@ -88,7 +89,7 @@ module "eks_managed_node_group" {
   max_size     = var.max_worker_nodes
   desired_size = var.desired_worker_nodes
   instance_types = var.instance_types
-  capacity_type  = "SPOT"
+  capacity_type  = "ON_DEMAND"
   ebs_optimized  = "true"
   enable_monitoring = "true"
   launch_template_name = "${var.cluster_name}-lt"
@@ -125,9 +126,13 @@ data "aws_eks_cluster_auth" "cluster" {
 }
 
 provider "kubernetes" {
-  host                   = data.aws_eks_cluster.cluster.endpoint
-  cluster_ca_certificate = base64decode(data.aws_eks_cluster.cluster.certificate_authority[0].data)
-  token                  = data.aws_eks_cluster_auth.cluster.token
+  host                   = module.eks.cluster_endpoint
+  cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority_data)
+  exec {
+    api_version = "client.authentication.k8s.io/v1beta1"
+    args        = ["eks", "get-token", "--cluster-name", var.cluster_name]
+    command     = "aws"
+  }
 }
 
 resource "kubernetes_annotations" "gp2_default" {
