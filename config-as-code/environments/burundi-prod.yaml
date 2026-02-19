@@ -618,8 +618,8 @@ oauth2-proxy:
   config:
     configFile: |-
       email_domains = [ "*" ]
-      github_org = "HCM-BURUNDI"
-      github_team = "hcm-moz-impl"
+      github_org = "HCM-BAUCHI"
+      github_team = "central-oauth-access"
       upstreams = [ "file:///dev/null" ]
 
 grafana:
